@@ -7,7 +7,7 @@ if ($handle = opendir('originals')) {
             $rImg = ImageCreateFromJPEG( "originals/{$file}" );
             $color = imagecolorallocate($rImg, 177, 177, 177);
             imagestring( $rImg,5,20,20,$picDate,$color);
-            imagejpeg($rImg,"watermarked/dated_{$file}",100);
+            imagejpeg($rImg,"watermarked/php/dated_{$file}",100);
             imagedestroy($rImg);
         }
     }

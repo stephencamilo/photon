@@ -13,8 +13,8 @@ fs.readdir('originals',function(err, files){
 					file = image.replace("originals/","");
 					var options = {
 						'text' : exifData.exif['DateTimeOriginal'],
-						'dstPath' : 'watermarked/'+'dated_'+file,
-						'color' : 'rgb(0, 177, 255)',
+						'dstPath' : 'watermarked/js/'+'dated_'+exifData.exif['DateTimeOriginal'].split(":").join("-").split(" ").join("_")+'.jpg',
+						'color' : 'rgb(255, 125, 35)',
 						'align' : 'ltr',
 					};
 
